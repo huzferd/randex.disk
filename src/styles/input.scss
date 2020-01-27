@@ -1,0 +1,11 @@
+.input-field {
+  width: 100%;
+  height: 36px;
+  background: none;
+  box-sizing: border-box;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  &:hover {
+    background-color: #fff;
+  }
+}

@@ -2,48 +2,63 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Rндекс.Диск</title>
   </head>
   <body>
     <div class="root">
       <header class="header">
-        <div class="navigation">
-          <div class="logo"></div>
-          <div class="menu">
-            <div>Mail</div>
-            <div>Calendar</div>
-            <div>Notes</div>
-          </div>
-          <div class="search"><input type="text" name="" id="search" /></div>
-          <div class="notification"><a>icon</a></div>
-          <div class="user"><div>User pic</div></div>
+        <div class="burger">
+          <div>=</div>
+          <div class="logo">Logo</div>
         </div>
+        <div class="menu">
+          <a href="#">Почта</a>
+          <a href="#">Календарь</a>
+          <a href="#">Заметки</a>
+        </div>
+        <div class="search"><input type="text" name="" id="search" class="input-field"/></div>
+        <div class="notification"><a>icon</a></div>
+        <div class="user"><div>User pic</div></div>
       </header>
       <div class="sidebar">
         <div class="buttons">
-          <button>Upload</button>
-          <button>Create</button>
+          <button class="button button--yellow">Upload</button>
+          <button class="button">Create</button>
         </div>
         <div class="navigation">
-          <div class="item">Newest</div>
-          <div class="item">Files</div>
-          <div class="item">Photo</div>
-          <div class="item">Shared access</div>
+          <a class="item">Последние</a>
+          <a class="item">Файлы</a>
+          <a class="item">Фото</a>
+          <a class="item">Shared access</a>
         </div>
         <div class="spaceinfo">
+          <div class="progress">-----------</div>
           <div>Free space: 48.3 GB out of 84 GB</div>
-          <button>+1 TB for 210₽</button>
+          <button class="button">+1 TB for 210₽</button>
         </div>
       </div>
       <div class="content">
-        <div class="header"></div>
-        <footer>
-          <a href="#">Помощь и обратная связь</a>
-          <a href="#">Блог</a>
-          <a href="#">Разработчикам</a>
-          <a href="#">Условия использования</a>
-          <a href="#">Участие в исследованиях</a>
-        </footer>
+        <div class="inner">
+          <div class="inner-head">
+            <div class="title">Файлы</div>
+            <div class="sort">По названию</div>
+            <div class="view-type">Представление</div>
+          </div>
+          <div class="inner-content">
+            <div>папка 1</div>
+            <div>папка 2</div>
+            <div>папка 3</div>
+          </div>
+          <footer class="content-footer">
+            <a href="#">Помощь и обратная связь</a>
+            <a href="#">Блог</a>
+            <a href="#">Разработчикам</a>
+            <a href="#">Условия использования</a>
+            <a href="#">Участие в исследованиях</a>
+          </footer>
+        </div>
       </div>
     </div>
   </body>
