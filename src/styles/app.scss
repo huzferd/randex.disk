@@ -28,17 +28,16 @@ body {
   border: $base-border;
   margin: 5px;
   display: flex;
-  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: 60px;
+  align-items: stretch;
 }
 
 .header-menu {
   display: flex;
-  width: 300px;
   align-items: center;
   padding-left: 10px;
 }
@@ -88,6 +87,23 @@ body {
   width: 100%;
   align-items: center;
   max-width: 485px;
+}
+
+.search-wrapper {
+  width: 100%;
+}
+
+.information {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.donwload {
+  text-decoration: none;
+  font-size: 15px;
 }
 
 .notification {
@@ -165,7 +181,7 @@ body {
 
 .navigation-inner {
   max-height: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .navigation-item {
@@ -185,7 +201,7 @@ body {
   }
 }
 
-.spaceinfo {
+.progress-info {
   border: $base-border;
   margin: 5px;
   display: flex;
@@ -194,9 +210,29 @@ body {
   align-items: center;
 }
 
+.progress-wrapper {
+  padding: 10px;
+  width: 100%;
+}
+
+.progress-border {
+  width: 100%;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.07);
+}
+
+.progress-status {
+  height: 5px;
+  width: 40%;
+  background-color: #6c6;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
 .usage {
   text-align: center;
   font-size: 15px;
+  padding: 10px;
 }
 
 .content {
