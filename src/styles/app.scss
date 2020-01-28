@@ -24,6 +24,7 @@ body {
 }
 
 .header {
+  background-color: $base-background-color;
   border: $base-border;
   margin: 5px;
   display: flex;
@@ -35,23 +36,82 @@ body {
   height: 60px;
 }
 
-.burger {
+.header-menu {
   display: flex;
-  width: 200px;
-  justify-content: space-between;
+  width: 300px;
   align-items: center;
+  padding-left: 10px;
+}
+
+.burger a {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("../public/images/burger.svg") no-repeat;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  .logo-link {
+    display: inline-block;
+    width: 121px;
+    height: 30px;
+    background: url("../public/images/logo.svg") no-repeat;
+    &--first {
+      color: #ff0000;
+    }
+  }
 }
 
 .menu {
   border: $base-border;
   margin: 5px;
+  margin-left: 40px;
   display: flex;
+  align-items: center;
+}
+
+.menu a {
+  text-decoration: none;
+  &:not(:first-child) {
+    margin-left: 20px;
+  }
 }
 
 .search {
   display: flex;
+  width: 100%;
   align-items: center;
   max-width: 485px;
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+}
+
+.notification a {
+  width: 20px;
+  height: 20px;
+  background: url("../public/images/notification.svg") no-repeat;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 25px;
+  background: url("../public/images/user-pic.png") no-repeat center;
 }
 
 .sidebar {
@@ -62,46 +122,179 @@ body {
   width: 250px;
   position: fixed;
   top: 65px;
+  bottom: 0;
+  left: 0;
+  width: 250px;
+  justify-content: space-between;
 }
 
 .buttons {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .navigation {
+  height: 100%;
   border: $base-border;
   margin: 5px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  &:before {
+    content: "";
+    height: 27px;
+    background-image: linear-gradient(
+      180deg,
+      $base-background-color,
+      hsla(0, 0%, 97.3%, 0)
+    );
+    top: 0;
+  }
+  &:after {
+    content: "";
+    height: 27px;
+    background-image: linear-gradient(
+      180deg,
+      $base-background-color,
+      hsla(0, 0%, 97.3%, 0)
+    );
+    top: 0;
+  }
+}
+
+.navigation-inner {
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
+.navigation-item {
+  display: block;
+  margin: 15px 5px;
+  position: relative;
+  &:after {
+    content: "";
+    border-radius: 14px;
+    transform: scale(1);
+    background-color: rgba(0, 0, 0, 0.07);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .spaceinfo {
   border: $base-border;
   margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.usage {
+  text-align: center;
+  font-size: 15px;
 }
 
 .content {
   border: $base-border;
+  background-color: #fff;
   margin: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin-left: 260px;
 }
 
 .inner-head {
+  width: 100%;
   border: $base-border;
   margin: 5px;
   display: flex;
   justify-content: space-between;
 }
 
+.sort-button {
+  &::before {
+    content: url("../public/images/sort.svg");
+  }
+  &:after {
+    content: url("../public/images/arrow.svg");
+  }
+}
+
+.view-type .medium {
+  &:before {
+    content: url("../public/images/medium.svg");
+  }
+}
+
+.view-type .small {
+  &:before {
+    content: url("../public/images/small.svg");
+  }
+}
+
+.view-type .list {
+  &:before {
+    content: url("../public/images/list.svg");
+  }
+}
+
 .inner-content {
+  width: 100%;
   border: $base-border;
   margin: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content-wrapper {
+  padding: 15px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.content-folder {
+  width: 145px;
+  height: 145px;
+  &:before {
+    content: url("../public/images/folder.svg");
+    width: 145px;
+    height: 145px;
+  }
 }
 
 .content-footer {
+  width: 100%;
   border: $base-border;
   margin: 5px;
+  font-size: 15px;
+}
+
+.content-footer a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 812px) {
+  .sidebar {
+    display: none;
+  }
+  .content {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .menu {
+    display: none;
+  }
+  .header-menu {
+    width: auto;
+  }
 }
