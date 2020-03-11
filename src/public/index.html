@@ -11,25 +11,33 @@
       <header class="header">
         <div class="header-menu">
           <div class="burger">
-            <a href="#"></a>
+            <a href="#" class="link-theme"></a>
           </div>
           <div class="logo">
-            <a href="#" class="logo-link"></a>
+            <a href="#" class="logo-link link-theme"></a>
           </div>
           <div class="menu">
-            <a href="#">Почта</a>
-            <a href="#">Календарь</a>
-            <a href="#">Заметки</a>
+            <a href="#" class="menu-item link-theme">Почта</a>
+            <a href="#" class="menu-item link-theme">Календарь</a>
+            <a href="#" class="menu-item link-theme">Заметки</a>
           </div>
         </div>
         <div class="search">
           <div class="search-wrapper">
-            <input type="text" name="" id="search" class="input-field" />
+            <input
+              placeholder="Поиск в моём диске"
+              type="text"
+              id="search"
+              class="input-field"
+            />
           </div>
         </div>
         <div class="information">
-          <div class="install">
-            <a href="#" class="donwload">Установить Диск для Windows</a>
+          <div class="install-software">
+            <!-- <span class="download-icon"></span> -->
+            <a href="#" class="download link-theme"
+              >Установить Диск для Windows
+            </a>
           </div>
           <div class="notification">
             <a class="icon"></a>
@@ -39,37 +47,38 @@
           </div>
         </div>
       </header>
-        <div class="sidebar">
-          <div class="buttons">
-            <button class="button button--yellow">Upload</button>
-            <button class="button">Create</button>
-          </div>
-          <div class="navigation">
-            <div class="navigation-inner">
-              <a class="navigation-item">Последние</a>
-              <a class="navigation-item">Файлы</a>
-              <a class="navigation-item">Фото</a>
-              <a class="navigation-item">Альбомы</a>
-              <a class="navigation-item">Общий доступ</a>
-              <a class="navigation-item">История</a>
-              <a class="navigation-item">Архив</a>
-              <a class="navigation-item">Корзина</a>
-            </div>
-          </div>
-          <div class="progress-info">
-            <div class="progress-wrapper">
-              <div class="progress-border">
-                <div class="progress-status"></div>
-              </div>
-              <div class="usage">Свободно 48,3 ГБ из 84 ГБ</div>
-              <button class="button">+1 ТБ за 210₽</button>
-            </div>
+      <div class="sidebar">
+        <div class="buttons">
+          <button class="button button--yellow">Загрузить</button>
+          <button class="button button--create">Создать</button>
+        </div>
+        <div class="navigation">
+          <div class="navigation-inner">
+            <a class="navigation-item link-theme">Последние</a>
+            <a class="navigation-item link-theme">Файлы</a>
+            <a class="navigation-item link-theme">Фото</a>
+            <a class="navigation-item link-theme">Альбомы</a>
+            <a class="navigation-item link-theme">Общий доступ</a>
+            <a class="navigation-item link-theme">История</a>
+            <a class="navigation-item link-theme">Архив</a>
+            <a class="navigation-item link-theme">Корзина</a>
           </div>
         </div>
-        <div class="content">
-          <div class="content-inner">
-            <div class="inner-head">
-              <div class="title">Файлы</div>
+        <div class="progress-info">
+          <div class="progress-wrapper">
+            <div class="progress-border">
+              <div class="progress-status"></div>
+            </div>
+            <div class="usage">Свободно 48,3 ГБ из 84 ГБ</div>
+            <button class="button">+1 ТБ за 210₽</button>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="content-inner">
+          <div class="inner-head">
+            <div class="title">Файлы</div>
+            <div class="header-right">
               <div class="sort">
                 <span class="sort-button">По названию</span>
               </div>
@@ -79,137 +88,138 @@
                 <span id="list-view" class="list"></span>
               </div>
             </div>
-            <div class="inner-content">
-              <div class="inner-content-wrapper">
-                <div class="content-folder"></div>
-                <div class="content__info">Папка 1</div>
-                <div class="info"></div>
-              </div>
-              <div class="inner-content-wrapper">
-                <div class="content-folder"></div>
-                <div class="content__info">Папка 1</div>
-                <div class="info"></div>
-              </div>
-              <div class="inner-content-wrapper">
-                <div class="content-folder"></div>
-                <div class="content__info">Папка 1</div>
-                <div class="info"></div>
-              </div>
-              <div class="inner-content-wrapper">
-                <div class="content-folder"></div>
-                <div class="content__info">Папка 1</div>
-                <div class="info"></div>
-              </div>
-              <div class="inner-content-wrapper">
-                <div class="content-folder"></div>
-                <div class="content__info">Папка 1</div>
-                <div class="info"></div>
-              </div>
-              <div class="inner-content-wrapper">
-                <div class="content-folder"></div>
-                <div class="content__info">Папка 1</div>
-                <div class="info"></div>
-              </div>
-              <div class="inner-content-wrapper">
-                <div class="content-folder"></div>
-                <div class="content__info">Папка 1</div>
-                <div class="info"></div>
-              </div>
-              <div class="inner-content-wrapper">
-                <div class="content-folder"></div>
-                <div class="content__info">Папка 1</div>
-                <div class="info"></div>
-              </div>
-              <div class="inner-content-wrapper">
-                <div class="content-folder"></div>
-                <div class="content__info">Папка 1</div>
-                <div class="info"></div>
-              </div>
-              <div class="inner-content-wrapper">
-                <div class="content-folder"></div>
-                <div class="content__info">Папка 1</div>
-                <div class="info"></div>
-              </div>
-              <div class="inner-content-wrapper">
-                <div class="content-folder"></div>
-                <div class="content__info">Папка 1</div>
-                <div class="info"></div>
-              </div>
-              <div class="inner-content-wrapper">
-                <div class="content-folder"></div>
-                <div class="content__info">Папка 1</div>
-                <div class="info"></div>
-              </div>
-              <div class="inner-content-wrapper">
-                <div class="content-folder"></div>
-                <div class="content__info">Папка 1</div>
-                <div class="info"></div>
-              </div>
-              <div class="inner-content-wrapper">
-                <div class="content-folder"></div>
-                <div class="content__info">Папка 1</div>
-                <div class="info"></div>
-              </div>
-              <div class="inner-content-wrapper">
-                <div class="content-folder"></div>
-                <div class="content__info">Папка 1</div>
-                <div class="info"></div>
-              </div>
-              <div class="inner-content-wrapper">
-                <div class="content-folder"></div>
-                <div class="content__info">Папка 1</div>
-                <div class="info"></div>
-              </div>
-              <div class="inner-content-wrapper">
-                <div class="content-folder"></div>
-                <div class="content__info">Папка 1</div>
-                <div class="info"></div>
-              </div>
-              <div class="inner-content-wrapper">
-                <div class="content-folder"></div>
-                <div class="content__info">Папка 1</div>
-                <div class="info"></div>
-              </div>
-              <div class="inner-content-wrapper">
-                <div class="content-folder"></div>
-                <div class="content__info">Папка 1</div>
-                <div class="info"></div>
-              </div>
-              <div class="inner-content-wrapper">
-                <div class="content-folder"></div>
-                <div class="content__info">Папка 1</div>
-                <div class="info"></div>
-              </div>
-              <div class="inner-content-wrapper">
-                <div class="content-folder"></div>
-                <div class="content__info">Папка 1</div>
-                <div class="info"></div>
-              </div>
-              <div class="inner-content-wrapper">
-                <div class="content-folder"></div>
-                <div class="content__info">Папка 1</div>
-                <div class="info"></div>
-              </div>
-              <div class="inner-content-wrapper">
-                <div class="content-folder"></div>
-                <div class="content__info">Папка 1</div>
-                <div class="info"></div>
-              </div>
-              <div class="inner-content-wrapper">
-                <div class="content-folder"></div>
-                <div class="content__info">Папка 1</div>
-                <div class="info"></div>
-              </div>
+          </div>
+          <div class="inner-content">
+            <div class="inner-content-wrapper">
+              <div class="content-folder"></div>
+              <div class="content__info">Папка 1</div>
+              <div class="info"></div>
+            </div>
+            <div class="inner-content-wrapper">
+              <div class="content-folder"></div>
+              <div class="content__info">Папка 1</div>
+              <div class="info"></div>
+            </div>
+            <div class="inner-content-wrapper">
+              <div class="content-folder"></div>
+              <div class="content__info">Папка 1</div>
+              <div class="info"></div>
+            </div>
+            <div class="inner-content-wrapper">
+              <div class="content-folder"></div>
+              <div class="content__info">Папка 1</div>
+              <div class="info"></div>
+            </div>
+            <div class="inner-content-wrapper">
+              <div class="content-folder"></div>
+              <div class="content__info">Папка 1</div>
+              <div class="info"></div>
+            </div>
+            <div class="inner-content-wrapper">
+              <div class="content-folder"></div>
+              <div class="content__info">Папка 1</div>
+              <div class="info"></div>
+            </div>
+            <div class="inner-content-wrapper">
+              <div class="content-folder"></div>
+              <div class="content__info">Папка 1</div>
+              <div class="info"></div>
+            </div>
+            <div class="inner-content-wrapper">
+              <div class="content-folder"></div>
+              <div class="content__info">Папка 1</div>
+              <div class="info"></div>
+            </div>
+            <div class="inner-content-wrapper">
+              <div class="content-folder"></div>
+              <div class="content__info">Папка 1</div>
+              <div class="info"></div>
+            </div>
+            <div class="inner-content-wrapper">
+              <div class="content-folder"></div>
+              <div class="content__info">Папка 1</div>
+              <div class="info"></div>
+            </div>
+            <div class="inner-content-wrapper">
+              <div class="content-folder"></div>
+              <div class="content__info">Папка 1</div>
+              <div class="info"></div>
+            </div>
+            <div class="inner-content-wrapper">
+              <div class="content-folder"></div>
+              <div class="content__info">Папка 1</div>
+              <div class="info"></div>
+            </div>
+            <div class="inner-content-wrapper">
+              <div class="content-folder"></div>
+              <div class="content__info">Папка 1</div>
+              <div class="info"></div>
+            </div>
+            <div class="inner-content-wrapper">
+              <div class="content-folder"></div>
+              <div class="content__info">Папка 1</div>
+              <div class="info"></div>
+            </div>
+            <div class="inner-content-wrapper">
+              <div class="content-folder"></div>
+              <div class="content__info">Папка 1</div>
+              <div class="info"></div>
+            </div>
+            <div class="inner-content-wrapper">
+              <div class="content-folder"></div>
+              <div class="content__info">Папка 1</div>
+              <div class="info"></div>
+            </div>
+            <div class="inner-content-wrapper">
+              <div class="content-folder"></div>
+              <div class="content__info">Папка 1</div>
+              <div class="info"></div>
+            </div>
+            <div class="inner-content-wrapper">
+              <div class="content-folder"></div>
+              <div class="content__info">Папка 1</div>
+              <div class="info"></div>
+            </div>
+            <div class="inner-content-wrapper">
+              <div class="content-folder"></div>
+              <div class="content__info">Папка 1</div>
+              <div class="info"></div>
+            </div>
+            <div class="inner-content-wrapper">
+              <div class="content-folder"></div>
+              <div class="content__info">Папка 1</div>
+              <div class="info"></div>
+            </div>
+            <div class="inner-content-wrapper">
+              <div class="content-folder"></div>
+              <div class="content__info">Папка 1</div>
+              <div class="info"></div>
+            </div>
+            <div class="inner-content-wrapper">
+              <div class="content-folder"></div>
+              <div class="content__info">Папка 1</div>
+              <div class="info"></div>
+            </div>
+            <div class="inner-content-wrapper">
+              <div class="content-folder"></div>
+              <div class="content__info">Папка 1</div>
+              <div class="info"></div>
+            </div>
+            <div class="inner-content-wrapper">
+              <div class="content-folder"></div>
+              <div class="content__info">Папка 1</div>
+              <div class="info"></div>
             </div>
           </div>
-          <footer class="content-footer">
-            <a href="#">Помощь и обратная связь</a>
-            <a href="#">Блог</a>
-            <a href="#">Разработчикам</a>
-            <a href="#">Условия использования</a>
-            <a href="#">Участие в исследованиях</a>
-          </footer>
         </div>
+        <footer class="content-footer">
+          <a href="#" class="link-theme">Помощь и обратная связь</a>
+          <a href="#" class="link-theme">Блог</a>
+          <a href="#" class="link-theme">Разработчикам</a>
+          <a href="#" class="link-theme">Условия использования</a>
+          <a href="#" class="link-theme">Участие в исследованиях</a>
+        </footer>
+      </div>
     </div>
   </body>
 </html>

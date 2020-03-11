@@ -6,9 +6,14 @@
   border-radius: 5px;
   border-color: rgba(0, 0, 0, 0.03);
   background-color: rgba(0, 0, 0, 0.04);
+  font-size: 14px;
+  padding-left: 15px;
   &:hover {
     background-color: #fff;
     box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.1);
     border-color: transparent;
+  }
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3);
   }
 }

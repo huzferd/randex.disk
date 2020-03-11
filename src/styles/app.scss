@@ -4,19 +4,28 @@
 @import "button";
 @import "row";
 @import "input";
+@import url("/font/stylesheet");
 
 body {
-  font-family: 15px "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font: 15px yandex-sans, Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: normal;
-  text-decoration: none;
   background-color: $base-background-color;
   margin: 0;
   padding: 0;
   height: 100vh;
   display: flex;
+}
+
+.link-theme {
+  color: #000;
+  text-decoration: none;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .root {
@@ -33,9 +42,9 @@ body {
 
 .header {
   background-color: #f8f8f8;
-  border: 1px dashed red;
-  margin: 5px;
+  margin: 0px 10px 0px 10px;
   display: flex;
+  justify-content: space-between;
   top: 0;
   left: 0;
   right: 0;
@@ -53,6 +62,7 @@ body {
   display: inline-block;
   width: 16px;
   height: 16px;
+  opacity: 0.5;
   background: url("../public/images/burger.svg") no-repeat;
   &:hover {
     opacity: 1;
@@ -63,6 +73,7 @@ body {
   display: flex;
   align-items: center;
   padding-left: 25px;
+  width: 227px;
   .logo-link {
     display: inline-block;
     width: 121px;
@@ -75,15 +86,16 @@ body {
 }
 
 .menu {
-  border: $base-border;
   margin: 5px;
   margin-left: 40px;
+  font: 15px yandex-sans, Arial, sans-serif;
   display: flex;
   align-items: center;
 }
 
 .menu a {
   text-decoration: none;
+  font-size: 16px;
   &:not(:first-child) {
     margin-left: 20px;
   }
@@ -93,9 +105,11 @@ body {
   display: flex;
   align-items: center;
   max-width: 485px;
+  width: 100%;
 }
 
 .search-wrapper {
+  width: 100%;
 }
 
 .information {
@@ -104,19 +118,36 @@ body {
   justify-content: flex-end;
 }
 
-.donwload {
+.download {
   text-decoration: none;
-  font-size: 15px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  &::before {
+    content: "";
+    background: url("../public/images/windows-logo.svg") no-repeat center;
+    margin-right: 5px;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.install-software {
+  display: inline-flex;
+  align-items: center;
 }
 
 .notification {
   display: flex;
   align-items: center;
+  margin-right: 23px;
 }
 
-.notification a {
+.icon {
   width: 20px;
   height: 20px;
+  cursor: pointer;
   background: url("../public/images/notification.svg") no-repeat;
 }
 
@@ -130,7 +161,17 @@ body {
   height: 40px;
   border-radius: 50%;
   margin-right: 25px;
+  position: relative;
   background: url("../public/images/user-pic.png") no-repeat center;
+  &::after {
+    content: "";
+    background: url("../public/images/plus.svg") no-repeat center;
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    top: -6px;
+    right: -6px;
+  }
 }
 
 .content-wrapper {
@@ -138,7 +179,6 @@ body {
 }
 
 .sidebar {
-  border: 1px dashed red;
   bottom: 0;
   justify-content: space-between;
   margin: 5px;
@@ -150,15 +190,34 @@ body {
 .buttons {
   display: flex;
   flex-direction: column;
+  padding: 10px 32px;
+}
+
+.button {
+  font-size: 15px;
+  height: 40px;
+}
+
+.button--yellow {
+  padding-left: 36px;
+  background: #fff url("../public/images/upload.svg") no-repeat 10px center;
+  cursor: pointer;
+}
+
+.button--create {
+  padding-left: 36px;
+  background: #fff url("../public/images/create.svg") no-repeat 10px center;
+  cursor: pointer;
 }
 
 .navigation {
   height: 100%;
-  border: $base-border;
   margin: 5px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  padding-left: 32px;
+  margin-right: 32px;
   &:before {
     content: "";
     height: 27px;
@@ -190,6 +249,9 @@ body {
   display: block;
   margin: 15px 5px;
   position: relative;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  line-height: 20px;
   &:after {
     content: "";
     border-radius: 14px;
@@ -202,7 +264,6 @@ body {
 }
 
 .progress-info {
-  border: $base-border;
   margin: 5px;
   display: flex;
   flex-direction: column;
@@ -234,34 +295,58 @@ body {
 }
 
 .content {
-  border: 1px dashed red;
-  background-color: #fff;
   margin: 10px;
   display: flex;
   flex-direction: column;
   grid-area: content;
+  padding-right: 58px;
 }
 
 .content-inner {
   flex: 1;
   display: flex;
   flex-direction: column;
+  padding: 32px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.07);
+}
+
+.content__info {
+  width: 145px;
+  text-align: center;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .inner-head {
-  border: $base-border;
+  display: inline;
   margin: 5px;
   display: flex;
   justify-content: space-between;
 }
 
 .sort-button {
+  opacity: 0.3;
+  cursor: pointer;
+  &:hover {
+    color: #000;
+    opacity: 1;
+  }
   &::before {
     content: url("../public/images/sort.svg");
+    padding-right: 5px;
   }
   &:after {
     content: url("../public/images/arrow.svg");
+    padding-left: 5px;
   }
+}
+
+.sort {
+  margin-right: 30px;
 }
 
 .view-type .medium {
@@ -284,11 +369,16 @@ body {
 
 .inner-content {
   flex: 1 1 0;
-  overflow-y: scroll;
-  border: 1px dashed red;
+  overflow-y: auto;
+  font: 13px / 14px yandex-sans, Arial, sans-serif;
   margin: 5px;
   display: flex;
   flex-wrap: wrap;
+}
+
+.header-right {
+  display: flex;
+  font-size: 14px;
 }
 
 .inner-content-wrapper {
@@ -310,13 +400,16 @@ body {
 }
 
 .content-footer {
-  border: $base-border;
   margin: 5px;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .content-footer a {
   text-decoration: none;
+  color: #999;
+  &:not(:first-child) {
+    margin-left: 16px;
+  }
 }
 
 @media screen and (max-width: 812px) {
