@@ -28,13 +28,12 @@
               placeholder="Поиск в моём диске"
               type="text"
               id="search"
-              class="input-field"
+              class="input-field search-field"
             />
           </div>
         </div>
         <div class="information">
           <div class="install-software">
-            <!-- <span class="download-icon"></span> -->
             <a href="#" class="download link-theme"
               >Установить Диск для Windows
             </a>
@@ -49,13 +48,15 @@
       </header>
       <div class="sidebar">
         <div class="buttons">
-          <button class="button button--yellow">Загрузить</button>
-          <button class="button button--create">Создать</button>
+          <button class="button button_upload">Загрузить</button>
+          <button class="button button_create">Создать</button>
         </div>
         <div class="navigation">
           <div class="navigation-inner">
             <a class="navigation-item link-theme">Последние</a>
-            <a class="navigation-item link-theme">Файлы</a>
+            <a class="navigation-item navigation-item_active link-theme"
+              >Файлы</a
+            >
             <a class="navigation-item link-theme">Фото</a>
             <a class="navigation-item link-theme">Альбомы</a>
             <a class="navigation-item link-theme">Общий доступ</a>
@@ -77,147 +78,228 @@
       <div class="content">
         <div class="content-inner">
           <div class="inner-head">
-            <div class="title">Файлы</div>
+            <h1 class="title">Файлы</h1>
             <div class="header-right">
               <div class="sort">
                 <span class="sort-button">По названию</span>
               </div>
               <div class="view-type">
-                <span id="medium-view" class="medium"></span>
-                <span id="small-view" class="small"></span>
-                <span id="list-view" class="list"></span>
+                <span
+                  id="large-view"
+                  class="view-type__icon view-type__icon_large"
+                ></span>
+                <span
+                  id="small-view"
+                  class="view-type__icon view-type__icon_small"
+                ></span>
+                <span
+                  id="list-view"
+                  class="view-type__icon view-type__icon_list"
+                ></span>
               </div>
             </div>
           </div>
-          <div class="inner-content">
-            <div class="inner-content-wrapper">
-              <div class="content-folder"></div>
-              <div class="content__info">Папка 1</div>
-              <div class="info"></div>
+          <div class="content-browser">
+            <div class="content-item">
+              <div class="content-item__icon"></div>
+              <div class="content-item__info">
+                <div class="content-item__column_title">
+                  Папка с документами
+                </div>
+                <div class="content-item__column_date">12.12.2019</div>
+                <div class="content-item__column_time">20:20</div>
+                <div class="content-item__column_size">100.2 МБ</div>
+              </div>
             </div>
-            <div class="inner-content-wrapper">
-              <div class="content-folder"></div>
-              <div class="content__info">Папка 1</div>
-              <div class="info"></div>
+            <div class="content-item">
+              <div class="content-item__icon"></div>
+              <div class="content-item__info">
+                <div class="content-item__column_title">
+                  Папка с документами
+                </div>
+                <div class="content-item__column_date">12.12.2019</div>
+                <div class="content-item__column_time">20:20</div>
+                <div class="content-item__column_size">100.2 МБ</div>
+              </div>
             </div>
-            <div class="inner-content-wrapper">
-              <div class="content-folder"></div>
-              <div class="content__info">Папка 1</div>
-              <div class="info"></div>
+            <div class="content-item">
+              <div class="content-item__icon"></div>
+              <div class="content-item__info">
+                <div class="content-item__column_title">
+                  Папка с документами
+                </div>
+                <div class="content-item__column_date">12.12.2019</div>
+                <div class="content-item__column_time">20:20</div>
+                <div class="content-item__column_size">100.2 МБ</div>
+              </div>
             </div>
-            <div class="inner-content-wrapper">
-              <div class="content-folder"></div>
-              <div class="content__info">Папка 1</div>
-              <div class="info"></div>
+            <div class="content-item">
+              <div class="content-item__icon"></div>
+              <div class="content-item__info">
+                <div class="content-item__column_title">
+                  Папка с документами
+                </div>
+                <div class="content-item__column_date">12.12.2019</div>
+                <div class="content-item__column_time">20:20</div>
+                <div class="content-item__column_size">100.2 МБ</div>
+              </div>
             </div>
-            <div class="inner-content-wrapper">
-              <div class="content-folder"></div>
-              <div class="content__info">Папка 1</div>
-              <div class="info"></div>
+            <div class="content-item">
+              <div class="content-item__icon"></div>
+              <div class="content-item__info">
+                <div class="content-item__column_title">
+                  Папка с документами
+                </div>
+                <div class="content-item__column_date">12.12.2019</div>
+                <div class="content-item__column_time">20:20</div>
+                <div class="content-item__column_size">100.2 МБ</div>
+              </div>
             </div>
-            <div class="inner-content-wrapper">
-              <div class="content-folder"></div>
-              <div class="content__info">Папка 1</div>
-              <div class="info"></div>
+            <div class="content-item">
+              <div class="content-item__icon"></div>
+              <div class="content-item__info">
+                <div class="content-item__column_title">
+                  Папка с документами
+                </div>
+                <div class="content-item__column_date">12.12.2019</div>
+                <div class="content-item__column_time">20:20</div>
+                <div class="content-item__column_size">100.2 МБ</div>
+              </div>
             </div>
-            <div class="inner-content-wrapper">
-              <div class="content-folder"></div>
-              <div class="content__info">Папка 1</div>
-              <div class="info"></div>
+            <div class="content-item">
+              <div class="content-item__icon"></div>
+              <div class="content-item__info">
+                <div class="content-item__column_title">
+                  Папка с документами
+                </div>
+                <div class="content-item__column_date">12.12.2019</div>
+                <div class="content-item__column_time">20:20</div>
+                <div class="content-item__column_size">100.2 МБ</div>
+              </div>
             </div>
-            <div class="inner-content-wrapper">
-              <div class="content-folder"></div>
-              <div class="content__info">Папка 1</div>
-              <div class="info"></div>
+            <div class="content-item">
+              <div class="content-item__icon"></div>
+              <div class="content-item__info">
+                <div class="content-item__column_title">
+                  Папка с документами
+                </div>
+                <div class="content-item__column_date">12.12.2019</div>
+                <div class="content-item__column_time">20:20</div>
+                <div class="content-item__column_size">100.2 МБ</div>
+              </div>
             </div>
-            <div class="inner-content-wrapper">
-              <div class="content-folder"></div>
-              <div class="content__info">Папка 1</div>
-              <div class="info"></div>
+            <div class="content-item">
+              <div class="content-item__icon"></div>
+              <div class="content-item__info">
+                <div class="content-item__column_title">
+                  Папка с документами
+                </div>
+                <div class="content-item__column_date">12.12.2019</div>
+                <div class="content-item__column_time">20:20</div>
+                <div class="content-item__column_size">100.2 МБ</div>
+              </div>
             </div>
-            <div class="inner-content-wrapper">
-              <div class="content-folder"></div>
-              <div class="content__info">Папка 1</div>
-              <div class="info"></div>
+            <div class="content-item">
+              <div class="content-item__icon"></div>
+              <div class="content-item__info">
+                <div class="content-item__column_title">
+                  Папка с документами
+                </div>
+                <div class="content-item__column_date">12.12.2019</div>
+                <div class="content-item__column_time">20:20</div>
+                <div class="content-item__column_size">100.2 МБ</div>
+              </div>
             </div>
-            <div class="inner-content-wrapper">
-              <div class="content-folder"></div>
-              <div class="content__info">Папка 1</div>
-              <div class="info"></div>
+            <div class="content-item">
+              <div class="content-item__icon"></div>
+              <div class="content-item__info">
+                <div class="content-item__column_title">
+                  Папка с документами
+                </div>
+                <div class="content-item__column_date">12.12.2019</div>
+                <div class="content-item__column_time">20:20</div>
+                <div class="content-item__column_size">100.2 МБ</div>
+              </div>
             </div>
-            <div class="inner-content-wrapper">
-              <div class="content-folder"></div>
-              <div class="content__info">Папка 1</div>
-              <div class="info"></div>
+            <div class="content-item">
+              <div class="content-item__icon"></div>
+              <div class="content-item__info">
+                <div class="content-item__column_title">
+                  Папка с документами
+                </div>
+                <div class="content-item__column_date">12.12.2019</div>
+                <div class="content-item__column_time">20:20</div>
+                <div class="content-item__column_size">100.2 МБ</div>
+              </div>
             </div>
-            <div class="inner-content-wrapper">
-              <div class="content-folder"></div>
-              <div class="content__info">Папка 1</div>
-              <div class="info"></div>
+            <div class="content-item">
+              <div class="content-item__icon"></div>
+              <div class="content-item__info">
+                <div class="content-item__column_title">
+                  Папка с документами
+                </div>
+                <div class="content-item__column_date">12.12.2019</div>
+                <div class="content-item__column_time">20:20</div>
+                <div class="content-item__column_size">100.2 МБ</div>
+              </div>
             </div>
-            <div class="inner-content-wrapper">
-              <div class="content-folder"></div>
-              <div class="content__info">Папка 1</div>
-              <div class="info"></div>
+            <div class="content-item">
+              <div class="content-item__icon"></div>
+              <div class="content-item__info">
+                <div class="content-item__column_title">
+                  Папка с документами
+                </div>
+                <div class="content-item__column_date">12.12.2019</div>
+                <div class="content-item__column_time">20:20</div>
+                <div class="content-item__column_size">100.2 МБ</div>
+              </div>
             </div>
-            <div class="inner-content-wrapper">
-              <div class="content-folder"></div>
-              <div class="content__info">Папка 1</div>
-              <div class="info"></div>
+            <div class="content-item">
+              <div class="content-item__icon"></div>
+              <div class="content-item__info">
+                <div class="content-item__column_title">
+                  Папка с документами
+                </div>
+                <div class="content-item__column_date">12.12.2019</div>
+                <div class="content-item__column_time">20:20</div>
+                <div class="content-item__column_size">100.2 МБ</div>
+              </div>
             </div>
-            <div class="inner-content-wrapper">
-              <div class="content-folder"></div>
-              <div class="content__info">Папка 1</div>
-              <div class="info"></div>
+            <div class="content-item">
+              <div class="content-item__icon"></div>
+              <div class="content-item__info">
+                <div class="content-item__column_title">
+                  Папка с документами
+                </div>
+                <div class="content-item__column_date">12.12.2019</div>
+                <div class="content-item__column_time">20:20</div>
+                <div class="content-item__column_size">100.2 МБ</div>
+              </div>
             </div>
-            <div class="inner-content-wrapper">
-              <div class="content-folder"></div>
-              <div class="content__info">Папка 1</div>
-              <div class="info"></div>
-            </div>
-            <div class="inner-content-wrapper">
-              <div class="content-folder"></div>
-              <div class="content__info">Папка 1</div>
-              <div class="info"></div>
-            </div>
-            <div class="inner-content-wrapper">
-              <div class="content-folder"></div>
-              <div class="content__info">Папка 1</div>
-              <div class="info"></div>
-            </div>
-            <div class="inner-content-wrapper">
-              <div class="content-folder"></div>
-              <div class="content__info">Папка 1</div>
-              <div class="info"></div>
-            </div>
-            <div class="inner-content-wrapper">
-              <div class="content-folder"></div>
-              <div class="content__info">Папка 1</div>
-              <div class="info"></div>
-            </div>
-            <div class="inner-content-wrapper">
-              <div class="content-folder"></div>
-              <div class="content__info">Папка 1</div>
-              <div class="info"></div>
-            </div>
-            <div class="inner-content-wrapper">
-              <div class="content-folder"></div>
-              <div class="content__info">Папка 1</div>
-              <div class="info"></div>
-            </div>
-            <div class="inner-content-wrapper">
-              <div class="content-folder"></div>
-              <div class="content__info">Папка 1</div>
-              <div class="info"></div>
+            <div class="content-item">
+              <div class="content-item__icon"></div>
+              <div class="content-item__info">
+                <div class="content-item__column_title">
+                  Папка с документами
+                </div>
+                <div class="content-item__column_date">12.12.2019</div>
+                <div class="content-item__column_time">20:20</div>
+                <div class="content-item__column_size">100.2 МБ</div>
+              </div>
             </div>
           </div>
         </div>
         <footer class="content-footer">
-          <a href="#" class="link-theme">Помощь и обратная связь</a>
-          <a href="#" class="link-theme">Блог</a>
-          <a href="#" class="link-theme">Разработчикам</a>
-          <a href="#" class="link-theme">Условия использования</a>
-          <a href="#" class="link-theme">Участие в исследованиях</a>
+          <div class="footer_link">
+            <a href="#" class="link-theme">Помощь и обратная связь</a>
+            <a href="#" class="link-theme">Блог</a>
+            <a href="#" class="link-theme">Разработчикам</a>
+            <a href="#" class="link-theme">Условия использования</a>
+            <a href="#" class="link-theme">Участие в исследованиях</a>
+          </div>
+          <div class="footer_copyright">
+            <span>© 2020 «Rндекс»</span>
+          </div>
         </footer>
       </div>
     </div>
