@@ -17,7 +17,7 @@ module.exports = {
         use: ["style-loader", "css-loader", "sass-loader"]
       },
       {
-        test: /\.(png|jpg|gif|svg)$/i,
+        test: /\.(png|jpg|gif|svg|ico)$/i,
         use: [
           {
             loader: "url-loader",
@@ -33,6 +33,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       inject: "body",
+      favicon: path.resolve(__dirname, "src/public/images/favicon.ico"),
       template: path.resolve(__dirname, "src/public/index.html")
     })
   ]
