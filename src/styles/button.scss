@@ -16,19 +16,6 @@
     0 4px 6px 0 rgba(0, 0, 0, 0.05);
   border-radius: 4px;
   background-color: #fff;
-  &_upload {
-    padding-left: 24px;
-    background: #fc0 url("../public/images/upload.svg") no-repeat 15px center;
-    background-color: #fc0;
-    &:hover {
-      background-color: #f2c200;
-    }
-  }
-  &_create {
-    padding-left: 24px;
-    margin-top: 10px;
-    background: #fff url("../public/images/create.svg") no-repeat 15px center;
-  }
   &:active {
     transition: none;
     transform: scale(0.96);
@@ -36,7 +23,17 @@
   &:hover {
     background-color: #eee;
   }
-  &:focus {
-    background-color: #eee;
+  &_create {
+    padding-left: 24px;
+    margin-top: 10px;
+    background: #fff url("../public/images/create.svg") no-repeat 15px center;
+  }
+  &_upload {
+    padding-left: 24px;
+    background: #fc0 url("../public/images/upload.svg") no-repeat 15px center;
+    background-color: #fc0;
+    &:hover {
+      background-color: #f2c200;
+    }
   }
 }

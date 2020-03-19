@@ -3,7 +3,6 @@
 @import "fonts";
 @import "button";
 @import "input";
-@import url("/font/stylesheet");
 
 body {
   font: 15px yandex-sans, Arial, sans-serif;
@@ -50,6 +49,11 @@ body {
   right: 0;
   height: 60px;
   grid-area: header;
+  position: fixed;
+  z-index: 10;
+  &_scroll {
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.07), 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+  }
 }
 
 .header-menu {
@@ -192,10 +196,12 @@ body {
 
 .sidebar {
   bottom: 0;
+  top: 60px;
   justify-content: space-between;
   display: flex;
   flex-direction: column;
   grid-area: sidebar;
+  position: fixed;
 }
 
 .buttons {
@@ -206,11 +212,10 @@ body {
 
 .navigation {
   height: 100%;
-  margin: 5px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding-left: 32px;
+  margin-left: 32px;
   margin-right: 32px;
   &:before {
     content: "";
@@ -242,12 +247,13 @@ body {
 
 .navigation-item {
   display: block;
-  margin: 15px 5px;
+  margin: 5px 5px;
   position: relative;
   font-size: 14px;
   letter-spacing: 0.2px;
   line-height: 20px;
   cursor: pointer;
+  padding: 5px;
   &_active {
     &:after {
       background-color: rgba(0, 0, 0, 0.07);
@@ -406,7 +412,7 @@ body {
   cursor: pointer;
   display: flex;
   &:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: $base-hover-color;
   }
   &_large {
     width: 170px;
